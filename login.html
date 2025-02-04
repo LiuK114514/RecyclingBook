@@ -9,10 +9,20 @@
                 align-items: center; /*列居中*/
                 height: 100vh; /* 使用视口高度，确保页面占满整个视口 */
                 margin: 0 auto; /* 移除默认的页面边距 */
+                flex-direction: column;
                 background-image: url('./登录封面.jpg'); /* 设置背景图片 */
                 background-size: cover; /* 背景图片覆盖整个区域 */
                 background-position: center; /* 背景图片居中 */
             }
+
+            h1 {
+                font-size: 60px; /* 设置标题大小 */
+                color: aqua; /* 设置标题颜色 */
+                text-align: center; /* 标题居中 */
+                margin-top: 10px; /* 设置标题上方的间距 */
+                margin-bottom: 40px; /* 设置标题下方的间距 */
+            }
+
             .box  {
                 width: 300px;
                 height: 280px;
@@ -74,6 +84,7 @@
         </style>
     </head>
     <body>
+        <h1>旧书回收利用系统</h1>
         <form class="box" action="">
             <!-- 登录界面 -->
             <div class="input-group">
@@ -98,7 +109,7 @@
             <button type="button" onclick="window.location.href='register.html'">注册</button>
 
             <p class="note">*收书员初次登录需注册</p>
-            
+
         </form>
     </body>
 </html> 
