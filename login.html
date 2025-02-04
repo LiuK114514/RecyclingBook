@@ -1,23 +1,105 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>旧书回收利用系统</title>
+        <title>登录</title>
         <style>
-            input{
-                color: rgb(187, 255, 0);
+             body {
+                display: flex;
+                justify-content: center;/*行居中*/
+                align-items: center; /*列居中*/
+                height: 100vh; /* 使用视口高度，确保页面占满整个视口 */
+                margin: 0 auto; /* 移除默认的页面边距 */
+                background-image: url('./登录封面.jpg'); /* 设置背景图片 */
+                background-size: cover; /* 背景图片覆盖整个区域 */
+                background-position: center; /* 背景图片居中 */
             }
+            .box  {
+                width: 300px;
+                height: 280px;
+                background-color: whitesmoke;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .input-group {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                margin-top: 10px;
+            }
+
+            .input-group label {
+                width: 60px; /* 给标签固定宽度 */
+            }
+
+            .input-group input {
+                flex: 1;
+            }
+
+            .radio-group {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom:30px;
+                margin-top: 10px;
+            }
+
+            .radio-group label {
+                margin-right: 10px;
+            }
+
+            button {
+                margin-bottom: 10px;
+                width:100%;
+            }
+
+            .note {
+                text-align: left;
+                font-size: 14px;
+                color: skyblue; /* 设置提示文字颜色为灰色 */
+                margin-top: 5px; /* 与按钮间隔 */
+            }
+
+            img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; /* 使用视口高度，确保页面占满整个视口 */
+                margin: 0 auto; /* 移除默认的页面边距 */
+            }
+
         </style>
     </head>
     <body>
-        <form action="">
+        <form class="box" action="">
             <!-- 登录界面 -->
-            账号：<input type="text" placeholder="请输入账号"><br><br>
-            密码：<input type="password" placeholder="输入密码"><br><br>
-            身份：<input type="radio" name="access" checked id="stu"><label for="stu">学生</label>
-                    <input type="radio" name="access" id="tea"><label for="tea">教师</label>
-                    <label ><input type="radio" name="access" id="con">管理员</label><br><br>
+            <div class="input-group">
+                <label for="username">账号：</label>
+                <input type="text" id="username" placeholder="请输入账号">
+            </div>
+
+            <div class="input-group">
+                <label for="password">密码：</label>
+                <input type="password" id="password" placeholder="请输入密码">
+            </div>
+
+            <div class="radio-group">
+                <label>身份：</label>
+                <input type="radio" name="access" checked id="stu"><label for="stu">学生</label>
+                <input type="radio" name="access" id="tea"><label for="tea">收书员</label>
+                <input type="radio" name="access" id="con"><label for="con">管理员</label>
+            </div>
+
             <button type="submit">登录</button>
-            <button type="">重置</button>
+
+            <button type="button" onclick="window.location.href='register.html'">注册</button>
+
+            <p class="note">*收书员初次登录需注册</p>
+
+
         </form>
     </body>
 </html> 

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+         body {
+           
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh; /* 使用视口高度，确保页面占满整个视口 */
+           margin: 0 auto; /* 移除默认的页面边距 */
+           background-image: url('./登录封面.jpg'); /* 设置背景图片 */
+            background-size: cover; /* 背景图片覆盖整个区域 */
+            background-position: center; /* 背景图片居中 */
+        }
+
+        .box  {
+                width: 350px;
+                height: 300px;
+                background-color: whitesmoke;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 10px;
+                margin-top: 10px;
+        }
+
+         .input-group label {
+                width: 80px; /* 给标签固定宽度 */
+        }
+
+        .input-group input {
+                flex: 1;
+         }
+
+         .select {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 20px;
+         }
+
+         .select label {
+                width: 80px; /* 保持与其他标签的宽度一致 */
+         }
+
+         .select select {
+               margin-left: 1px;
+               width: 110px
+         }
+
+        button {
+                margin-bottom: 20px;
+                width:100%;
+         }
+
+    </style>
+</head>
+<body>
+    <form class="box">
+        <div class="input-group">
+            <label for="username">账号：</label>
+            <input type="text" id="username" placeholder="请输入账号">
+        </div>
+
+        <div class="input-group">
+            <label for="password">设置密码：</label>
+            <input type="password" id="password" placeholder="5个字符到16个字符">
+        </div>
+
+        <div class="input-group">
+            <label for="realname">姓名：</label>
+            <input type="text" id="realname" placeholder="请填写真实姓名">
+        </div>
+
+        <div class="input-group">
+            <label for="phone">联系电话：</label>
+            <input type="text" id="phone" placeholder="请填写联系电话">
+        </div>
+
+        <div class="select">
+            <label for="campus">选择校区：</label>
+            <select id="campus">
+                <option selected>朝晖</option>
+                <option>屏峰</option>
+                <option>莫干山</option>
+            </select>
+        </div>
+
+        <button type="submit">确认</button>
+        <button type="reset">重置</button>
+    </form>
+</body>
+</html>
