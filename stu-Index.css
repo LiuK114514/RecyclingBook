@@ -1,0 +1,103 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 页眉样式 */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    border-right: 2px solid black;
+    padding-right: 9px;
+    margin-right: 1px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 100px); 
+}
+
+/* 侧栏样式 */
+#sidebar {
+    width: 250px; 
+    background-color: #f4f4f4; 
+    padding: 20px;
+}
+
+#sidebar h2 {
+    margin-bottom: 20px;
+    font-size: small;
+}
+
+#sidebar .option {
+    margin-bottom: 20px;
+}
+
+#sidebar .option button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#sidebar .option button:hover {
+    background-color: #45a049;
+}
+
+/* 主内容样式 */
+.main-content {
+    flex-grow: 1; 
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

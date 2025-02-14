@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旧书回收平台 - 学生首页</title>
+    <link rel="stylesheet" href="stu-Index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">
+                <h1>旧书回收平台</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">个人资料</a></li>
+                    <li><a href="#">上传书籍</a></li>
+                    <li><a href="#">建议箱</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="sidebar">
+                <h2>欢迎使用旧书回收平台！请选择操作：</h2>
+                <div class="option">
+                    <button @click="showSection('sellBooks')">我要卖书</button>
+                </div>
+                <div class="option">
+                    <button @click="showSection('reuseBooks')">旧书再利用</button>
+                </div>
+                <div class="option">
+                    <button @click="showSection('inbox')">收件箱</button>
+                </div>
+            </section>
+
+            <div class="main-content">
+                <div v-if="activeSection === 'sellBooks'">
+                    <h1>我要卖书</h1>
+                    <p>这里是我要卖书的内容。</p>
+                </div>
+                <div v-if="activeSection === 'reuseBooks'">
+                    <h1>旧书再利用</h1>
+                    <p>这里是旧书再利用的内容。</p>
+                </div>
+                <div v-if="activeSection === 'inbox'">
+                    <h1>收件箱</h1>
+                    <p>这里是收件箱的内容。</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 旧书回收平台</p>
+        </footer>
+    </div>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                activeSection: '' // 当前显示的内容区域
+            },
+            methods: {
+                showSection(section) {
+                    this.activeSection = section; // 切换不同的内容区域
+                }
+            }
+        });
+    </script>
+</body>
+</html>
